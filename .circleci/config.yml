@@ -23,7 +23,7 @@ jobs:
           key: dependencies_imooc
       - run:
           name: Build
-          command: yarn build
+          command: yarn docs:build
       - run:
           name: Prepare shell commands
           # shell chmod +x 赋予执行权限
