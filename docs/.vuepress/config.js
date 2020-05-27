@@ -3,14 +3,15 @@ module.exports = {
     // 你的GitHub仓库，请正确填写
     // repo: 'https://github.com/xxxxxxx/blog-demo',
     // 自定义仓库链接文字。
+    base:'/notes/',
     repoLabel: 'My GitHub',
     nav: [
-      { text: 'Home', link: '/notes' },
-      { text: 'FirstBlog', link: '/notes/blog/FirstBlog.md' },
+      { text: 'Home', link: '/' },
+      { text: 'FirstBlog', link: '/blog/FirstBlog.md' },
     ],
     sidebar: [
-      ['/notes', '首页'],
-      ['/notes/blog/FirstBlog.md', '我的第一篇牛逼博客'],
+      ['/', '首页'],
+      ['/blog/FirstBlog.md', '我的第一篇牛逼博客'],
     ],
   },
 };
