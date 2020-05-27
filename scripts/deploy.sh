@@ -7,7 +7,6 @@
 # abort the script if there is a non-zero error
 set -e
 
-# 创建的一个新的仓库
 # 设置发布的用户名与邮箱
 git config --global user.email "$GH_EMAIL" >/dev/null 2>&1
 git config --global user.name "$GH_NAME" >/dev/null 2>&1
@@ -17,9 +16,12 @@ echo 'email is: '$GH_EMAIL
 echo 'name is: '$GH_NAME
 echo 'sitesource is: '$siteSource
 
+mkdir gh-pages-branch
+cd gh-pages-branch
+
 
 # 把构建好的文件目录给拷贝进来
-cd "../docs/.vuepress/${siteSource}"
+cp -a "../docs/.vuepress/${siteSource}/." .
 
 pwd
 
