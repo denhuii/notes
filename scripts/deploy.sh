@@ -37,7 +37,7 @@ else
 fi
 
 # 把构建好的文件目录给拷贝进来
-cp -a "../${siteSource}/." .
+cp -a "../docs/.vuepress/${siteSource}/." .
 
 ls -la
 
