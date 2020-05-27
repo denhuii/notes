@@ -5,12 +5,12 @@ module.exports = {
     // 自定义仓库链接文字。
     repoLabel: 'My GitHub',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'FirstBlog', link: '/blog/FirstBlog.md' },
+      { text: 'Home', link: '/notes' },
+      { text: 'FirstBlog', link: '/notes/blog/FirstBlog.md' },
     ],
     sidebar: [
-      ['/', '首页'],
-      ['/blog/FirstBlog.md', '我的第一篇牛逼博客'],
+      ['/notes', '首页'],
+      ['/notes/blog/FirstBlog.md', '我的第一篇牛逼博客'],
     ],
   },
 };
