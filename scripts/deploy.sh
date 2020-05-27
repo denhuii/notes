@@ -19,18 +19,22 @@ echo 'sitesource is: '$siteSource
 
 
 # 把构建好的文件目录给拷贝进来
-cd docs/.vuepress/dist
+cd "../docs/.vuepress/${siteSource}/"
 
-git init
+pwd
 
-# 把所有的文件添加到git
-git add -A
+ls -la
+
+# git init
+
+# # 把所有的文件添加到git
+# git add -A
 
 
-# 推送文件
-git push -f git@github.com:denhuii/denhuii.github.io.git master
-# 资源回收，删除临时分支与目录
-cd ..
-rm -rf gh-pages-branch
+# # 推送文件
+# git push -f git@github.com:denhuii/denhuii.github.io.git master
+# # 资源回收，删除临时分支与目录
+# cd ..
+# rm -rf gh-pages-branch
 
 echo "Finished Deployment!"
