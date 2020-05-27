@@ -19,7 +19,7 @@ echo 'sitesource is: '$siteSource
 
 
 # 把构建好的文件目录给拷贝进来
-cd "../docs/.vuepress/${siteSource}/"
+cd docs/.vuepress/dist
 
 git init
 
