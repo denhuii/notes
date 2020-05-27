@@ -25,7 +25,7 @@ echo 'sitesource is: '$siteSource
 
 
 # 把构建好的文件目录给拷贝进来
-cp -a "../docs/.vuepress/dist." .
+cp -a "../docs/.vuepress/${siteSource}/." .
 
 ls -la
 
