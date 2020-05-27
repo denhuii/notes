@@ -27,16 +27,16 @@ pwd
 
 ls -la
 
-# git init
+git init
 
 # # 把所有的文件添加到git
-# git add -A
+git add -A
 
 
 # # 推送文件
-# git push -f git@github.com:denhuii/denhuii.github.io.git master
+git push -f git@github.com:denhuii/denhuii.github.io.git master
 # # 资源回收，删除临时分支与目录
-# cd ..
-# rm -rf gh-pages-branch
+cd ..
+rm -rf gh-pages-branch
 
 echo "Finished Deployment!"
