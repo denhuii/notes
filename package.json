@@ -1,0 +1,14 @@
+{
+  "name": "blog-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "vuepress": "^1.5.0"
+  }
+}
