@@ -1,7 +1,7 @@
 module.exports = {
   // 部署站点的基础路径
   base: '/notes/',
-  title: '个人笔记',
+  title: 'NOTES',
   themeConfig: {
     // 你的GitHub仓库，请正确填写
     repo: 'https://github.com/denhuii/notes',
@@ -10,12 +10,26 @@ module.exports = {
     // 导航栏
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'FirstBlog', link: '/blog/FirstBlog.md' },
+      { text: '前端', link: '/web/JavaScript.md' },
+      { text: '运维', link: '/doc/linux.md' },
+      {
+        text: '专业',
+        items: [
+          { text: '计算机网络', link: '/language/chinese/' },
+          {
+            text: '高级程序设计',
+            link: '/language/chinese/',
+          },
+        ],
+      },
     ],
+    // sidebarDepth: 0,
     // 侧边栏
     sidebar: [
       ['/', '首页'],
-      ['/blog/FirstBlog.md', '我的第一篇牛逼博客'],
+      ['/doc/linux.md', 'Linux'],
+      ['/doc/docker.md', 'Docker'],
+      ['/web/JavaScript.md', 'JavaScript'],
     ],
   },
 };
