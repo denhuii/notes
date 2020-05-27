@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker | NOTES</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.c0aa756c.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/6.1d2ae7a2.js" as="script"><link rel="prefetch" href="/notes/assets/js/3.d07fa4b8.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.6468950d.js"><link rel="prefetch" href="/notes/assets/js/7.6fd97b5f.js"><link rel="prefetch" href="/notes/assets/js/8.96a5f5fd.js"><link rel="prefetch" href="/notes/assets/js/9.ee95a148.js">
+    <link rel="stylesheet" href="/notes/assets/css/0.styles.31262cea.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notes/" class="home-link router-link-active"><!----> <span class="site-name">NOTES</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/notes/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/notes/web/JavaScript.html" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/notes/doc/linux.html" class="nav-link">
+  运维
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/language/chinese/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/notes/language/chinese/" class="nav-link">
+  高级程序设计
+</a></li></ul></div></div> <a href="https://github.com/denhuii/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/notes/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/notes/web/JavaScript.html" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/notes/doc/linux.html" class="nav-link">
+  运维
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/language/chinese/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/notes/language/chinese/" class="nav-link">
+  高级程序设计
+</a></li></ul></div></div> <a href="https://github.com/denhuii/notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/notes/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/notes/doc/linux.html" class="sidebar-link">Linux</a></li><li><a href="/notes/doc/docker.html" aria-current="page" class="active sidebar-link">Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#centos中安装docker的方法" class="sidebar-link">CentOS中安装Docker的方法</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#docker修改镜像地址" class="sidebar-link">Docker修改镜像地址</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#docker-compose集合命令" class="sidebar-link">Docker-compose集合命令</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#doclever" class="sidebar-link">Doclever</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#showdoc" class="sidebar-link">Showdoc</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#mongo" class="sidebar-link">Mongo</a></li><li class="sidebar-sub-header"><a href="/notes/doc/docker.html#redis" class="sidebar-link">Redis</a></li></ul></li><li><a href="/notes/web/JavaScript.html" class="sidebar-link">JavaScript</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker"><a href="#docker" class="header-anchor">#</a> Docker</h1> <h2 id="centos中安装docker的方法"><a href="#centos中安装docker的方法" class="header-anchor">#</a> CentOS中安装Docker的方法</h2> <ol><li><p>先删除旧的版本(如果没有可以跳过)</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum remove docker <span class="token punctuation">\</span>
+                docker-client <span class="token punctuation">\</span>
+                docker-client-latest <span class="token punctuation">\</span>
+                docker-common <span class="token punctuation">\</span>
+                docker-latest <span class="token punctuation">\</span>
+                docker-latest-logrotate <span class="token punctuation">\</span>
+                docker-logrotate <span class="token punctuation">\</span>
+                docker-engine
+
+</code></pre></div></li> <li><p>安装必须的依赖</p> <div class="language-bsh extra-class"><pre class="language-text"><code>sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre></div><p>添加<code>stable</code>的Docekr-ce的源</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum-config-manager <span class="token punctuation">\</span>
+    --add-repo <span class="token punctuation">\</span>
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div></li> <li><p>安装<code>docker-ce</code>：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+</code></pre></div></li> <li><p>选择指定的安装版本(可选)</p> <div class="language- extra-class"><pre class="language-text"><code>yum list docker-ce --showduplicates | sort -r
+
+docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
+docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
+docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable
+</code></pre></div><p>我们来举个例子，比如我们要安装<code>3:18.09.1-3.el7</code>这个版本，使用如下命令结构：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> docker-ce-cli-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> containerd.io
+</code></pre></div><p>命令说明：</p> <p>第一部分是<code>docker-ce</code>，第二部分是版本号<code>18.09.1</code>，看明白了吗？就是这样子：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> -y docker-ce-18.09.1 docker-ce-cli-18.09.1
+</code></pre></div></li> <li><p>启动服务并测试一下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 启动服务</span>
+<span class="token function">sudo</span> systemctl start docker
+
+<span class="token comment"># 来一个Hello World吧</span>
+<span class="token function">sudo</span> docker run hello-world
+Unable to <span class="token function">find</span> image <span class="token string">'hello-world:latest'</span> locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete
+Digest: sha256:2557e3c07ed1e38f26e389462d03ed943586f744621577a99efb77324b0fe535
+Status: Downloaded newer image <span class="token keyword">for</span> hello-world:latest
+
+Hello from Docker<span class="token operator">!</span>
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ <span class="token number">1</span>. The Docker client contacted the Docker daemon.
+ <span class="token number">2</span>. The Docker daemon pulled the <span class="token string">&quot;hello-world&quot;</span> image from the Docker Hub.
+    <span class="token punctuation">(</span>amd64<span class="token punctuation">)</span>
+ <span class="token number">3</span>. The Docker daemon created a new container from that image <span class="token function">which</span> runs the
+    executable that produces the output you are currently reading.
+ <span class="token number">4</span>. The Docker daemon streamed that output to the Docker client, <span class="token function">which</span> sent it
+    to your terminal.
+
+To try something <span class="token function">more</span> ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu <span class="token function">bash</span>
+
+Share images, automate workflows, and <span class="token function">more</span> with a <span class="token function">free</span> Docker ID:
+ https://hub.docker.com/
+
+For <span class="token function">more</span> examples and ideas, visit:
+ https://docs.docker.com/get-started/
+</code></pre></div><p>如果看到上面的提示，说明Docker已经成功安装并运行了了。</p></li> <li><p>关于升级&amp;删除：</p> <p>升级：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 更新所有</span>
+yum -y update
+
+<span class="token comment"># 更新指定</span>
+yum -y update docker-ce docker-ce-cli containerd.io
+</code></pre></div><p>删除：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum remove docker-ce
+
+<span class="token comment"># 删除文件系统</span>
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf /var/lib/docker
+</code></pre></div></li></ol> <h2 id="docker修改镜像地址"><a href="#docker修改镜像地址" class="header-anchor">#</a> Docker修改镜像地址</h2> <ol><li><p>修改配置文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> /etc/docker/daemon.json
+</code></pre></div><div class="language-vim extra-class"><pre class="language-vim"><code><span class="token punctuation">{</span>
+    <span class="token string">&quot;registry-mirrors&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://hub-mirror.c.163.com/&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>重启docker</p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl daemon-reload
+systemctl restart docker
+</code></pre></div></li></ol> <h2 id="docker-compose集合命令"><a href="#docker-compose集合命令" class="header-anchor">#</a> Docker-compose集合命令</h2> <p>ompose工具是一个<code>批量</code>工具，用于运行与管理多个<code>docker</code>容器。</p> <p>官方文档：<a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener noreferrer">Install Docker Compose<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol><li><p>在Mac/Windows中，已经集成了docker-compose命令</p></li> <li><p>在WindowsServer中
+先启动PowerShell</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>Net.ServicePointManager<span class="token punctuation">]</span>::SecurityProtocol <span class="token operator">=</span> <span class="token punctuation">[</span>Net.SecurityProtocolType<span class="token punctuation">]</span>::Tls12
+</code></pre></div><p>然后运行如下命令：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>Invoke-WebRequest <span class="token string">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Windows-x86_64.exe&quot;</span> -UseBasicParsing -OutFile <span class="token variable">$Env</span>:ProgramFiles<span class="token punctuation">\</span>Docker<span class="token punctuation">\</span>docker-compose.exe
+</code></pre></div><p>然后测试一下：<code>docker-compose --version</code></p></li> <li><p>Linux中：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 下载docker-compose</span>
+<span class="token function">curl</span> -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-<span class="token variable"><span class="token variable">`</span><span class="token function">uname</span> -s<span class="token variable">`</span></span>-<span class="token variable"><span class="token variable">`</span><span class="token function">uname</span> -m<span class="token variable">`</span></span> <span class="token operator">&gt;</span> /usr/local/bin/docker-compose
+
+<span class="token comment"># 给予执行权限</span>
+<span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+
+<span class="token comment"># 测试命令</span>
+$ docker-compose --version
+docker-compose version <span class="token number">1.25</span>.5, build 8a1c60f6
+</code></pre></div></li></ol> <h2 id="doclever"><a href="#doclever" class="header-anchor">#</a> Doclever</h2> <ol><li><p>创建编辑一个<code>docker-compose</code>配置文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> /home/doclever/docker-compose.yml
+</code></pre></div></li> <li><p>保存以下内容</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;2&quot;</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">DOClever</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> lw96/doclever
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> <span class="token string">&quot;DOClever&quot;</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> 10000<span class="token punctuation">:</span><span class="token number">10000</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /srv/doclever/file<span class="token punctuation">:</span>/root/DOClever/data/file
+    <span class="token punctuation">-</span> /srv/doclever/img<span class="token punctuation">:</span>/root/DOClever/data/img
+    <span class="token punctuation">-</span> /srv/doclever/tmp<span class="token punctuation">:</span>/root/DOClever/data/tmp
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> DB_HOST=mongodb<span class="token punctuation">:</span>//mongo<span class="token punctuation">:</span>27017/DOClever
+    <span class="token punctuation">-</span> PORT=10000
+    <span class="token key atrule">links</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mongo<span class="token punctuation">:</span>mongo
+
+  <span class="token key atrule">mongo</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mongo<span class="token punctuation">:</span>latest
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> <span class="token string">&quot;mongodb&quot;</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /srv/doclever/db<span class="token punctuation">:</span>/data/db
+</code></pre></div></li> <li><p>切换到当前文件夹</p> <div class="language-bsh extra-class"><pre class="language-text"><code>cd /home/doclever/
+</code></pre></div></li> <li><p>运行该脚本</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose -d up
+</code></pre></div></li></ol> <h2 id="showdoc"><a href="#showdoc" class="header-anchor">#</a> Showdoc</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建一个本地文件</span>
+<span class="token function">mkdir</span> -p /showdoc_deta/html
+
+<span class="token comment"># 开放权限</span>
+<span class="token function">chmod</span> -R <span class="token number">777</span> /showdoc_data/
+
+<span class="token comment"># docker 运行命令</span>
+docker run -d --name showdoc_test -p <span class="token number">13500</span>:80 -v /showdoc_data/html/:/var/www/html/ star7th/showdoc
+
+<span class="token comment"># 拷贝文件</span>
+docker <span class="token builtin class-name">exec</span> showdoc_test <span class="token punctuation">\</span>cp -fr /showdoc_data/html/ /var/www
+</code></pre></div><h2 id="mongo"><a href="#mongo" class="header-anchor">#</a> Mongo</h2> <p>[https://segmentfault.com/a/1190000015603831#item-0-3]</p> <p><code>docker-compose</code>配置<code>docker-compose.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span> 
+  <span class="token key atrule">mongo</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mongo
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">MONGO_INITDB_ROOT_USERNAME</span><span class="token punctuation">:</span> root
+      <span class="token key atrule">MONGO_INITDB_ROOT_PASSWORD</span><span class="token punctuation">:</span> example 
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 27017<span class="token punctuation">:</span><span class="token number">27017</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /home/mongodb<span class="token punctuation">:</span>/data/db
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token builtin class-name">exec</span> -it 9f29c394b9ee /bin/bash
+
+mongo
+
+<span class="token operator">&gt;</span>use admin
+<span class="token comment"># switched to db admin</span>
+
+<span class="token operator">&gt;</span> db.auth<span class="token punctuation">(</span><span class="token string">'root'</span>,<span class="token string">'example'</span><span class="token punctuation">)</span>
+<span class="token comment"># 1</span>
+</code></pre></div><h3 id="创建用户"><a href="#创建用户" class="header-anchor">#</a> 创建用户</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  user: <span class="token string">&quot;test&quot;</span>,
+  pwd: <span class="token string">&quot;123456&quot;</span>,
+  roles: <span class="token punctuation">[</span><span class="token punctuation">{</span> role: <span class="token string">&quot;dbOwner&quot;</span>, db: <span class="token string">&quot;testdb&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="备份数据"><a href="#备份数据" class="header-anchor">#</a> 备份数据</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 1.</span>
+docker <span class="token builtin class-name">exec</span> -it <span class="token punctuation">[</span>NAMES<span class="token punctuation">]</span> mongodump -h localhost -u root -p example -o /tmp/test
+
+<span class="token comment"># 2.将文件从容器拷贝到宿主机</span>
+docker <span class="token function">cp</span> <span class="token punctuation">[</span>CONTAINER ID <span class="token punctuation">]</span>:/tmp/test /tmp/test
+</code></pre></div><h3 id="恢复数据"><a href="#恢复数据" class="header-anchor">#</a> 恢复数据</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token builtin class-name">exec</span> -it <span class="token punctuation">[</span>NAMES<span class="token punctuation">]</span> mongorestore -h localhost -u root -p example --dir /tmp/test
+</code></pre></div><h2 id="redis"><a href="#redis" class="header-anchor">#</a> Redis</h2> <p><code>docker-compose</code>配置<code>docker-compose.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3&quot;</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">redis-test</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">&quot;redis&quot;</span>
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> <span class="token string">&quot;redis-test&quot;</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span> 
+      <span class="token punctuation">-</span> 15001<span class="token punctuation">:</span><span class="token number">6379</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+      <span class="token punctuation">-</span> /home/readistest<span class="token punctuation">:</span>/data
+    command<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">&quot;redis-server&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;--requirepass&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">]</span>
+</code></pre></div><p>进入命令行</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 进入镜像</span>
+docker <span class="token builtin class-name">exec</span> -it redis-test /bin/bash
+
+<span class="token comment"># 进入交互式终端</span>
+redis-cli
+
+<span class="token comment">#退出终端</span>
+quit
+
+<span class="token comment">#退出镜像</span>
+<span class="token builtin class-name">exit</span> 
+</code></pre></div><div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3&quot;</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span> 
+ <span class="token key atrule">db</span><span class="token punctuation">:</span>
+  <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+  <span class="token key atrule">container_name</span><span class="token punctuation">:</span> mysql
+  <span class="token key atrule">command</span><span class="token punctuation">:</span> 
+   <span class="token punctuation">-</span><span class="token punctuation">-</span>lower_case_table_names=1
+   <span class="token punctuation">-</span><span class="token punctuation">-</span>character<span class="token punctuation">-</span>set<span class="token punctuation">-</span>server=utf8mb4
+   <span class="token punctuation">-</span><span class="token punctuation">-</span>collation<span class="token punctuation">-</span>server=utf8mb4_general_ci
+   <span class="token punctuation">-</span><span class="token punctuation">-</span>explicit_defaults_for_timestamp=true
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
+  <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+   <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
+   <span class="token key atrule">MYSQL_ROOT_PASSWORD</span><span class="token punctuation">:</span> example
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+   <span class="token punctuation">-</span> 3306<span class="token punctuation">:</span><span class="token number">3306</span>
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+   <span class="token punctuation">-</span> /home/mysql/data<span class="token punctuation">:</span>/var/lib/mysql
+   <span class="token punctuation">-</span> /home/mysql/config<span class="token punctuation">:</span>/etc/mysql/conf.d
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/doc/linux.html" class="prev">
+        Linux
+      </a></span> <span class="next"><a href="/notes/web/JavaScript.html">
+        JavaScript
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/notes/assets/js/app.c0aa756c.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/6.1d2ae7a2.js" defer></script>
+  </body>
+</html>
