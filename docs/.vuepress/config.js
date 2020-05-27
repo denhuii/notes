@@ -10,7 +10,7 @@ module.exports = {
     ],
     sidebar: [
       ['/', '首页'],
-      ['/blog/FirstBlog.md', '我的第一篇博客'],
+      ['/blog/FirstBlog.md', '我的第一篇牛逼博客'],
     ],
   },
 };
