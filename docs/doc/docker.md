@@ -349,7 +349,9 @@ quit
 exit 
 ```
 
+## mysql
 
+`docker-compose.yml`
 
 ```yml
 version: "3"
@@ -371,5 +373,27 @@ services:
   volumes: 
    - /home/mysql/data:/var/lib/mysql
    - /home/mysql/config:/etc/mysql/conf.d
+```
+
+## Jenkins
+
+`docker-compose.yml`
+
+```yml
+version: '3'
+services:
+  jenkins: 
+    container_name: 'jenkins'
+    image: jenkins/jenkins:lts
+    restart: always
+    user: jenkins:994
+    ports: 
+    - "11005:8080"
+    - "50000:50000"
+    - "10051:10051"
+    volumes:
+    - /home/jenkins/data:/var/jenkins_home
+    - /usr/bin/docker:/usr/bin/docker
+    - /var/run/docker.sock:/var/run/docker.sock
 ```
 
