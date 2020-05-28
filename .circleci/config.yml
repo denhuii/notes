@@ -23,7 +23,7 @@ jobs:
           key: dependencies_notes
       - run:
           name: Build
-          command: yarn start
+          command: yarn build
       - run:
           name: Prepare shell commands
           # shell chmod +x 赋予执行权限
