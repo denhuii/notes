@@ -9,27 +9,23 @@ module.exports = {
     repoLabel: 'GitHub',
     // 导航栏
     nav: [
-      { text: 'Home', link: '/' },
-      { text: '前端', link: '/web/JavaScript.md' },
-      { text: '运维', link: '/doc/linux.md' },
-      {
-        text: '专业',
-        items: [
-          { text: '计算机网络', link: '/language/chinese/' },
-          {
-            text: '高级程序设计',
-            link: '/language/chinese/',
-          },
-        ],
-      },
+      { text: '前端', link: '/web/JavaScript' },
+      { text: '运维', link: '/doc/linux' },
+      // {
+      //   text: '专业',
+      //   items: [
+      //     { text: '计算机网络', link: '/language/chinese/' },
+      //     {
+      //       text: '高级程序设计',
+      //       link: '/language/chinese/',
+      //     },
+      //   ],
+      // },
     ],
-    // sidebarDepth: 0,
     // 侧边栏
-    sidebar: [
-      // ['/', '首页'],
-      ['/doc/linux.md', 'Linux'],
-      ['/doc/docker.md', 'Docker'],
-      ['/web/JavaScript.md', 'JavaScript'],
-    ],
+    sidebar: {
+      '/doc/': ['linux', 'docker'],
+      '/web/': ['JavaScript','Typescripe'],
+    },
   },
 };

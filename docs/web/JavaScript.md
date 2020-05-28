@@ -1,6 +1,6 @@
-# [「中高级前端面试」JavaScript手写代码无敌秘籍](<https://juejin.im/post/5c9c3989e51d454e3a3902b6#heading-23>)
+# JavaScript
 
-## 1. 实现一个`new`操作符
+### 1. 实现一个`new`操作符
 
 > [来源：「你不知道的javascript」 英文版](https://link.juejin.im/?target=http%3A%2F%2Fblog.ifyouseewendy.com%2Fblog%2F2017%2F07%2F03%2Freview-you-dont-know-js-this-and-object-prototypes%2F%23what-happened-when-we-callnew-)
 
@@ -29,7 +29,7 @@ var obj = New(A, 1, 2);
 var obj = new A(1, 2);
 ```
 
-## 2. 实现一个`JSON.stringify`
+### 2. 实现一个`JSON.stringify`
 
 > `JSON.stringify(value[, replacer [, space]])`：
 
@@ -67,7 +67,7 @@ jsonStringify([1, "false", false]) // "[1,"false",false]"
 jsonStringify({b: undefined}) // "{"b":"undefined"}"
 ```
 
-## 3. 实现一个`JSON.parse`
+### 3. 实现一个`JSON.parse`
 
 > ```
 > JSON.parse(text[, reviver])
@@ -75,7 +75,7 @@ jsonStringify({b: undefined}) // "{"b":"undefined"}"
 
 用来解析JSON字符串，构造由字符串描述的JavaScript值或对象。提供可选的reviver函数用以在返回之前对所得到的对象执行变换(操作)。
 
-### 3.1 第一种：直接调用 eval
+#### 3.1 第一种：直接调用 eval
 
 ```js
 function jsonParse(opt) {
@@ -112,7 +112,7 @@ if (
 }
 ```
 
-### 3.2 第二种：Function
+#### 3.2 第二种：Function
 
 > 来源 [神奇的eval()与new Function()](https://link.juejin.im/?target=https%3A%2F%2Fimys.net%2F20151222%2Feval-with-new-function.html)
 
@@ -136,7 +136,7 @@ var json = (new Function('return ' + jsonStr))();
 
 > [《JSON.parse 三种实现方式》](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fyoungwind%2Fblog%2Fissues%2F115)
 
-## 4. 实现一个`call`或 `apply`
+### 4. 实现一个`call`或 `apply`
 
 > 实现改编来源：[JavaScript深入之call和apply的模拟实现 #11](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fmqyqingfeng%2FBlog%2Fissues%2F11)
 
@@ -148,7 +148,7 @@ var json = (new Function('return ' + jsonStr))();
 
 > `func.apply(thisArg, [argsArray])`，调用一个函数，以及作为一个数组（或类似数组对象）提供的参数。
 
-### 4.1 `Function.call`按套路实现
+#### 4.1 `Function.call`按套路实现
 
 `call`核心：
 
@@ -159,7 +159,7 @@ var json = (new Function('return ' + jsonStr))();
 
 为啥说是套路实现呢？因为真实面试中，面试官很喜欢让你逐步地往深考虑，这时候你可以反套路他，先写个简单版的：
 
-### 4.1.1 简单版
+##### 4.1.1 简单版
 
 ```js
 var foo = {
@@ -171,7 +171,7 @@ var foo = {
 foo.bar() // 1
 ```
 
-### 4.1.2 完善版
+##### 4.1.2 完善版
 
 当面试官有进一步的发问，或者此时你可以假装思考一下。然后写出以下版本：
 
@@ -215,7 +215,7 @@ Function.prototype.apply2 = function(context = window) {
 复制代码
 ```
 
-## 5. 实现一个`Function.bind()`
+### 5. 实现一个`Function.bind()`
 
 `bind()`方法:
 
@@ -244,7 +244,7 @@ Function.prototype.bind2 = function(content) {
 复制代码
 ```
 
-## 6. 实现一个继承
+### 6. 实现一个继承
 
 **寄生组合式继承**
 
@@ -280,21 +280,15 @@ parent.sayName();    // parent name: father
 var child = new Child('son', 'father');
 ```
 
-## 7. 实现一个JS函数柯里化
-
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/29/169c51cdabc7cec6?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+### 7. 实现一个JS函数柯里化
 
 什么是柯里化？
-
-
 
 > 在计算机科学中，柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数且返回结果的新函数的技术。
 
 **函数柯里化的主要作用和特点就是参数复用、提前返回和延迟执行。**
 
-### 7.1 通用版
+#### 7.1 通用版
 
 ```js
 function curry(fn, args) {
@@ -322,7 +316,7 @@ multi(2)(3,4);
 multi(2,3)(4);
 ```
 
-### 7.2 `ES6`骚写法
+#### 7.2 `ES6`骚写法
 
 ```js
 const curry = (fn, arr = []) => (...args) => (
@@ -337,7 +331,7 @@ curryTest(1,2)(4)(3) //返回10
 curryTest(1,2)(3,4) //返回10
 ```
 
-## 8. 手写一个`Promise`(中高级必考)
+### 8. 手写一个`Promise`(中高级必考)
 
 我们来过一遍`Promise/A+`规范：
 
@@ -353,11 +347,7 @@ curryTest(1,2)(3,4) //返回10
 promise1=promise.then(onFulfilled, onRejected);
 ```
 
-### 8.1 `Promise`的流程图分析
-
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/28/169c500344dfe50a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+#### 8.1 `Promise`的流程图分析
 
 来回顾下`Promise`
 
@@ -379,9 +369,7 @@ promise.then(function (value) {
 复制代码
 ```
 
-### 8.2 面试够用版
-
-> 来源：[实现一个完美符合Promise/A+规范的Promise](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fforthealllight%2Fblog%2Fissues%2F4)
+#### 8.2 面试够用版
 
 ```
 function myPromise(constructor){
@@ -440,7 +428,7 @@ p.then(function(x){console.log(x)})
 复制代码
 ```
 
-### 8.3 大厂专供版
+#### 8.3 大厂专供版
 
 直接贴出来吧，这个版本还算好理解
 
@@ -555,31 +543,17 @@ Promise.prototype.then = function(onFulfilled, onRejected) {
 };
 ```
 
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/28/169c4f8bd6d4d902?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-emmm，我还是乖乖地写回进阶版吧。
-
-
-
-## 9. 手写防抖(`Debouncing`)和节流(`Throttling`)
+### 9. 手写防抖(`Debouncing`)和节流(`Throttling`)
 
 > `scroll` 事件本身会触发页面的重新渲染，同时 `scroll` 事件的 `handler` 又会被高频度的触发, 因此事件的 `handler` 内部不应该有复杂操作，例如 `DOM` 操作就不应该放在事件处理中。 针对此类高频度触发事件问题（例如页面 `scroll` ，屏幕 `resize`，监听用户输入等），有两种常用的解决方法，防抖和节流。
 
-### 9.1 防抖(`Debouncing`)实现
+#### 9.1 防抖(`Debouncing`)实现
 
 典型例子：限制 鼠标连击 触发。
 
 一个比较好的解释是：
 
 > 当一次事件发生后，事件处理器要等一定阈值的时间，如果这段时间过去后 再也没有 事件发生，就处理最后一次发生的事件。假设还差 `0.01` 秒就到达指定时间，这时又来了一个事件，那么之前的等待作废，需要重新再等待指定时间。
-
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/29/169c5097dc88f476?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
 
 ```js
 // 防抖动函数
@@ -613,15 +587,9 @@ window.addEventListener('scroll',realFunc);
 复制代码
 ```
 
-### 9.2 节流(`Throttling`)实现
+#### 9.2 节流(`Throttling`)实现
 
 > 可以理解为事件在一个管道中传输，加上这个节流阀以后，事件的流速就会减慢。实际上这个函数的作用就是如此，它可以将一个函数的调用频率限制在一定阈值内，例如 1s，那么 1s 内这个函数一定不会被调用两次
-
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/29/169c50c5bc4129f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
 
 简单的节流函数:
 
@@ -639,7 +607,7 @@ function throttle(fn, wait) {
 复制代码
 ```
 
-### 9.3 结合实践
+#### 9.3 结合实践
 
 **通过第三个参数来切换模式。**
 
@@ -663,23 +631,15 @@ const throttle = function(fn, delay, isDebounce) {
 }
 ```
 
-## 10. 手写一个JS深拷贝
+### 10. 手写一个JS深拷贝
 
-有个最著名的乞丐版实现，在《你不知道的JavaScript（上）》里也有提及：
-
-
-
-![img](https://user-gold-cdn.xitu.io/2019/3/29/169c51230cefc5ba?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
-
-### 10.1 乞丐版
+#### 10.1 乞丐版
 
 ```js
  var newObj = JSON.parse( JSON.stringify( someObj ) );
 ```
 
-### 10.2 面试够用版
+#### 10.2 面试够用版
 
 ```js
 function deepCopy(obj){
@@ -698,7 +658,7 @@ function deepCopy(obj){
 }
 ```
 
-## 11.实现一个`instanceOf`
+### 11.实现一个`instanceOf`
 
 ```js
 function instanceOf(left,right) {
