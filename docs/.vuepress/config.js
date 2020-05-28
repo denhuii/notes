@@ -26,7 +26,7 @@ module.exports = {
     // sidebarDepth: 0,
     // 侧边栏
     sidebar: [
-      ['/', '首页'],
+      // ['/', '首页'],
       ['/doc/linux.md', 'Linux'],
       ['/doc/docker.md', 'Docker'],
       ['/web/JavaScript.md', 'JavaScript'],
