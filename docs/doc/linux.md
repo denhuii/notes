@@ -149,19 +149,19 @@ firewall-cmd --query-port=8080/tcp
 #### \# 开放80端口
 
 ```bash
-firewall-cmd --permanent --add-port=80/tcp`
+firewall-cmd --permanent --add-port=80/tcp
 ```
 
 #### \# 移除端口
 
 ```bash
-firewall-cmd --permanent --remove-port=8080/tcp`
+firewall-cmd --permanent --remove-port=8080/tcp
 ```
 
 #### \#重启防火墙(修改配置后要重启防火墙)
 
 ```bash
-firewall-cmd --reload`
+firewall-cmd --reload
 ```
 
 \# 参数解释
