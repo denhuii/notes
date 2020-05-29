@@ -10,7 +10,7 @@ module.exports = {
     // 导航栏
     nav: [
       { text: '前端', link: '/web/JavaScript' },
-      { text: 'Linux', link: '/doc/Linux' },
+      { text: 'linux', link: '/doc/Linux' },
       // {
       //   text: '专业',
       //   items: [
@@ -24,7 +24,7 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/doc/': ['Linux', 'docker', 'Gitlab', 'Jenkins'],
+      '/doc/': ['linux', 'docker', 'Gitlab', 'Jenkins'],
       '/web/': ['JavaScript', 'Typescript'],
     },
   },
