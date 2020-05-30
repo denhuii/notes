@@ -9,8 +9,8 @@ module.exports = {
     repoLabel: 'GitHub',
     // 导航栏
     nav: [
-      { text: '前端', link: '/web/JavaScript.md' },
-      { text: 'DevOps', link: '/doc/Linux.md' },
+      { text: '前端', link: '/web/JavaScript' },
+      { text: '运维', link: '/doc/linux' },
       // {
       //   text: '专业',
       //   items: [
@@ -24,8 +24,8 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/doc/': ['Linux.md', 'Docker.md', 'Gitlab.md', 'Jenkins.md'],
-      '/web/': ['JavaScript.md', 'Typescript.md'],
+      '/doc/': ['linux', 'docker', 'Gitlab', 'Jenkins'],
+      '/web/': ['JavaScript', 'Typescript'],
     },
   },
 };
