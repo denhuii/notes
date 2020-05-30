@@ -4,7 +4,7 @@ heroImage: /IMG_60.jpg
 heroText: denhuii
 tagline: 该网站用于个人记笔记及资料整理，如不慎侵犯了你的权益，请联系本人删除
 actionText: 联系方式 →
-actionLink: /doc/touch.md
+actionLink: /
 # features:
 # - title: 简洁至上
 #   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
