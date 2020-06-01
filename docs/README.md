@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /IMG_60.jpg
+heroImage: /IMG_60.gif
 heroText: denhuii
 tagline: 该网站用于个人记笔记及资料整理，如不慎侵犯了你的权益，请联系本人删除
 actionText: 联系方式 →
