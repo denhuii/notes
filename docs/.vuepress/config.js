@@ -9,7 +9,7 @@ module.exports = {
     repoLabel: 'GitHub',
     // 导航栏
     nav: [
-      { text: '前端', link: '/web/JavaScript' },
+      { text: '前端', link: '/web/js' },
       { text: '运维', link: '/doc/linux' },
       // {
       //   text: '专业',
@@ -24,9 +24,8 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/doc/': ['linux', 'docker', 'jenkins', 'nginx'],
-      '/web/': ['JavaScript', 'Typescript'],
+      '/doc/': ['linux', 'docker', 'jenkins'],
+      '/web/': ['js', 'ts'],
     },
   },
 };
-j;
