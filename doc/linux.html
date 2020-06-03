@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.0">
     
     <meta name="description" content="">
-    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.0002e702.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/8.94c3281f.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.79e5cf56.js"><link rel="prefetch" href="/notes/assets/js/3.d07fa4b8.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.6468950d.js"><link rel="prefetch" href="/notes/assets/js/6.b49cd8ce.js"><link rel="prefetch" href="/notes/assets/js/7.470bf758.js"><link rel="prefetch" href="/notes/assets/js/9.1c34bc93.js">
+    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.0fa85f2b.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/8.8461330a.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.79e5cf56.js"><link rel="prefetch" href="/notes/assets/js/3.d07fa4b8.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.6468950d.js"><link rel="prefetch" href="/notes/assets/js/6.b49cd8ce.js"><link rel="prefetch" href="/notes/assets/js/7.74dc753d.js"><link rel="prefetch" href="/notes/assets/js/9.1c34bc93.js">
     <link rel="stylesheet" href="/notes/assets/css/0.styles.31262cea.css">
   </head>
   <body>
@@ -46,8 +46,8 @@ Port <span class="token number">10022</span>
 </code></pre></div></li> <li><p>重启一下ssh</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">service</span> sshd restart
 </code></pre></div></li></ol> <h3 id="通过密匙方式连接ssh"><a href="#通过密匙方式连接ssh" class="header-anchor">#</a> 通过密匙方式连接ssh</h3> <ol><li><p>本地pc执行，会在<code>~/.ssh/</code>下生成一个<code>id_rsa.pub</code>和<code>id_rsa</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen
 </code></pre></div></li> <li><p>查看<code>id_rsa.pub</code>中的内容</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> id_rsa.pub
-</code></pre></div></li> <li><p>复制 <code>ide-rsa</code>中的内容到服务器<code>~/.ssh/authourized_keys</code>中</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> authourized_keys
-</code></pre></div></li> <li><p><code>vim</code>编辑本地<code>.ssh</code>目录中的config</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ~/.ssh/config
+</code></pre></div></li> <li><p>复制 <code>ide-rsa.pub</code>中的内容到服务器<code>~/.ssh/authourized_keys</code>中</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> authourized_keys
+</code></pre></div></li> <li><p><code>vi</code>编辑本地<code>.ssh</code>目录中的config</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ~/.ssh/config
 </code></pre></div><div class="language-vim extra-class"><pre class="language-vim"><code>Host <span class="token punctuation">[</span>自定义个名字<span class="token punctuation">]</span>
 Port <span class="token punctuation">[</span>端口<span class="token punctuation">]</span>
 HostName <span class="token punctuation">[</span>ip地址<span class="token punctuation">]</span>
@@ -72,6 +72,6 @@ IdentitiesOnly yes
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/notes/assets/js/app.0002e702.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/8.94c3281f.js" defer></script>
+    <script src="/notes/assets/js/app.0fa85f2b.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/8.8461330a.js" defer></script>
   </body>
 </html>

@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.0">
     
     <meta name="description" content="">
-    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.0002e702.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/7.470bf758.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.79e5cf56.js"><link rel="prefetch" href="/notes/assets/js/3.d07fa4b8.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.6468950d.js"><link rel="prefetch" href="/notes/assets/js/6.b49cd8ce.js"><link rel="prefetch" href="/notes/assets/js/8.94c3281f.js"><link rel="prefetch" href="/notes/assets/js/9.1c34bc93.js">
+    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.0fa85f2b.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/7.74dc753d.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.79e5cf56.js"><link rel="prefetch" href="/notes/assets/js/3.d07fa4b8.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.6468950d.js"><link rel="prefetch" href="/notes/assets/js/6.b49cd8ce.js"><link rel="prefetch" href="/notes/assets/js/8.8461330a.js"><link rel="prefetch" href="/notes/assets/js/9.1c34bc93.js">
     <link rel="stylesheet" href="/notes/assets/css/0.styles.31262cea.css">
   </head>
   <body>
@@ -104,7 +104,7 @@ java -version
 
 <span class="token function">sudo</span> <span class="token function">rpm</span> --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 </code></pre></div></li> <li><p>安装jenkins（可能会提示没有密匙，添加<code>--nogpgcheck</code>跳过检查）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>yum <span class="token function">install</span> jenkins --nogpgcheck
-</code></pre></div></li></ol> <h3 id="历史版本安装"><a href="#历史版本安装" class="header-anchor">#</a> 历史版本安装</h3> <p>通过yum直接安装的是最新版本的Jenkins，必须使用JDK1.8,，由于我们使用的是jdk1.7，所以需要安装历史版本的jenkins。以下是安装步骤。</p> <ol><li><p>去官网，点击下载</p></li> <li><p>选择对应操作系统</p></li> <li><p>选择版本，由于2.54以上的版本需要JDK1.8，所以我们选择选择低版本，这里选择使用2.46.3的版本</p></li> <li><p>将下载下来的rpm文件上传到服务器</p></li> <li><p>首先先添加Jenkins源</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">wget</span> -O /etc/yum.repos.d/jenkins.repo http://jenkins-ci.org/redhat/jenkins.repo
+</code></pre></div></li></ol> <h3 id="历史版本安装"><a href="#历史版本安装" class="header-anchor">#</a> 历史版本安装</h3> <p>通过yum直接安装的是最新版本的Jenkins，必须使用JDK1.8,，由于我们使用的是jdk1.7，所以需要安装历史版本的jenkins。以下是安装步骤。</p> <ol><li><p>去官网，点击下载</p> <p><a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer">官网地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>选择对应操作系统</p></li> <li><p>选择版本，由于2.54以上的版本需要JDK1.8，所以我们选择选择低版本，这里选择使用2.46.3的版本</p></li> <li><p>将下载下来的rpm文件上传到服务器</p></li> <li><p>首先先添加Jenkins源</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">wget</span> -O /etc/yum.repos.d/jenkins.repo http://jenkins-ci.org/redhat/jenkins.repo
 
 <span class="token function">sudo</span> <span class="token function">rpm</span> --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 </code></pre></div></li> <li><p>使用rpm命令安装Jenkins，文件名按实际情况填写</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">rpm</span> -ih jenkins-2.46.3-1.1.norch.rpm
@@ -113,6 +113,6 @@ java -version
       <a href="/notes/doc/docker.html" class="prev">
         Docker
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/notes/assets/js/app.0002e702.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/7.470bf758.js" defer></script>
+    <script src="/notes/assets/js/app.0fa85f2b.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/7.74dc753d.js" defer></script>
   </body>
 </html>
