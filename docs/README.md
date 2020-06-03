@@ -2,8 +2,8 @@
 home: true
 heroImage: /IMG_60.gif
 heroText: denhuii
-tagline: 该网站用于个人记笔记及资料整理，如不慎侵犯了你的权益，请联系本人删除
-actionText: 联系方式 →
+tagline: 不谋全局者，不足谋一域
+actionText: Let's go →
 actionLink: /
 # features:
 # - title: 简洁至上
