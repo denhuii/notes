@@ -26,7 +26,7 @@ module.exports = {
     // 侧边栏
     sidebar: {
       '/doc/': ['linux', 'docker', 'jenkins'],
-      '/web/': ['js', 'ts'],
+      '/web/': ['js', 'ts', 'vue'],
       '/code/': ['vue'],
     },
   },

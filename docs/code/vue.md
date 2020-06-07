@@ -1,6 +1,6 @@
 # Vue
 
-## 常用过滤器
+## 过滤器
 
 文件结构，过滤器放在`filter`文件夹下：
 
@@ -29,7 +29,7 @@ export{
 }
 ```
 
-main.js，导入过滤器
+`main.js`，导入过滤器
 
 ```js
 // 找 filter/filter.js
@@ -40,7 +40,7 @@ Object.keys(filters).forEach((key) => {
 })
 ```
 
-常用的过滤器，`filter/filter.js`
+`filter/filter.js`，常用的过滤器，
 
 ```js
 //去除空格  type 1-所有空格  2-前后空格  3-前空格 4-后空格

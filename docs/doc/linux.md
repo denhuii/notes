@@ -72,10 +72,10 @@ vi /etc/ssh/sshd_config
    cat id_rsa.pub
    ```
 
-3. 复制 `ide-rsa.pub`中的内容到服务器`~/.ssh/authourized_keys`中
+3. 复制 `ide-rsa.pub`中的内容到服务器`~/.ssh/authorized_keys`中
 
    ```bash
-   vi authourized_keys
+   vi authorized_keys
    ```
 
 4. `vi`编辑本地`.ssh`目录中的config
