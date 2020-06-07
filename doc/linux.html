@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.0">
     
     <meta name="description" content="">
-    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.1e1237cb.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/9.96af0f8b.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.3afe50c8.js"><link rel="prefetch" href="/notes/assets/js/11.a2ce1d21.js"><link rel="prefetch" href="/notes/assets/js/3.f3f6d0a6.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.4c2d18ff.js"><link rel="prefetch" href="/notes/assets/js/6.b5731a54.js"><link rel="prefetch" href="/notes/assets/js/7.cf2f2b08.js"><link rel="prefetch" href="/notes/assets/js/8.331c5c27.js">
+    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.43474a70.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/9.02820929.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.3afe50c8.js"><link rel="prefetch" href="/notes/assets/js/11.ee566d7c.js"><link rel="prefetch" href="/notes/assets/js/12.17331110.js"><link rel="prefetch" href="/notes/assets/js/3.f3f6d0a6.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.2a2d8e1b.js"><link rel="prefetch" href="/notes/assets/js/6.a0509dd6.js"><link rel="prefetch" href="/notes/assets/js/7.c74dbb8a.js"><link rel="prefetch" href="/notes/assets/js/8.66bd9cb2.js">
     <link rel="stylesheet" href="/notes/assets/css/0.styles.31262cea.css">
   </head>
   <body>
@@ -50,7 +50,7 @@ Port <span class="token number">10022</span>
 </code></pre></div></li> <li><p>重启一下ssh</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">service</span> sshd restart
 </code></pre></div></li></ol> <h3 id="通过密匙方式连接ssh"><a href="#通过密匙方式连接ssh" class="header-anchor">#</a> 通过密匙方式连接ssh</h3> <ol><li><p>本地pc执行，会在<code>~/.ssh/</code>下生成一个<code>id_rsa.pub</code>和<code>id_rsa</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen
 </code></pre></div></li> <li><p>查看<code>id_rsa.pub</code>中的内容</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> id_rsa.pub
-</code></pre></div></li> <li><p>复制 <code>ide-rsa.pub</code>中的内容到服务器<code>~/.ssh/authourized_keys</code>中</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> authourized_keys
+</code></pre></div></li> <li><p>复制 <code>ide-rsa.pub</code>中的内容到服务器<code>~/.ssh/authorized_keys</code>中</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> authorized_keys
 </code></pre></div></li> <li><p><code>vi</code>编辑本地<code>.ssh</code>目录中的config</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ~/.ssh/config
 </code></pre></div><div class="language-vim extra-class"><pre class="language-vim"><code>Host <span class="token punctuation">[</span>自定义个名字<span class="token punctuation">]</span>
 Port <span class="token punctuation">[</span>端口<span class="token punctuation">]</span>
@@ -76,6 +76,6 @@ IdentitiesOnly yes
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/notes/assets/js/app.1e1237cb.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/9.96af0f8b.js" defer></script>
+    <script src="/notes/assets/js/app.43474a70.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/9.02820929.js" defer></script>
   </body>
 </html>
