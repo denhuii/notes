@@ -11,6 +11,7 @@ module.exports = {
     nav: [
       { text: '前端', link: '/web/js' },
       { text: '运维', link: '/doc/linux' },
+      { text: '代码片段', link: '/code/vue' },
       // {
       //   text: '专业',
       //   items: [
@@ -24,8 +25,9 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
-      '/doc/': ['linux', 'docker','jenkins'],
+      '/doc/': ['linux', 'docker', 'jenkins'],
       '/web/': ['js', 'ts'],
+      '/code/': ['vue'],
     },
   },
 };
