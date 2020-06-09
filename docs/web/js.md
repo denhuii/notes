@@ -9,7 +9,7 @@
 `new`操作符做了这些事：
 
 - 它创建了一个全新的对象。
-- 它会被执行`[[Prototype]]`（也就是`__proto__`）链接。
+- 它会被执行`[Prototype]`（也就是`__proto__`）链接。
 - 它使`this`指向新创建的对象。。
 - 通过`new`创建的每个对象将最终被`[[Prototype]]`链接到这个函数的`prototype`对象上。
 - 如果函数没有返回对象类型`Object`(包含`Functoin, Array, Date, RegExg, Error`)，那么`new`表达式中的函数调用将返回该对象引用。
@@ -674,3 +674,117 @@ function instanceOf(left,right) {
     }
 }
 ```
+
+## 对于call、apply、bind 的理解
+
+### 前言
+
+> js中关于call、apply、bind的问题，比如…
+
+1. 怎么利用call、apply来求一个数组中最大或者最小值
+2. 如何利用call、apply来做继承
+3. apply、call、bind的区别和主要应用场景
+
+#### 作用
+
+> **改变函数运行时的this指向**
+
+```js
+function Person(name) {
+    this.name = name;
+  }
+  Person.prototype = {
+    constructor: Person,
+    showName: function () {
+      console.log(this.name);
+    },
+  };
+  var person = new Person('qianlong');
+
+  person.showName();
+  // qianlong
+
+  var animal = { name: 'cat' };
+  person.showName.apply(animal);
+  // cat
+  person.showName.call(animal);
+  // cat
+  person.showName.bind(animal)();
+  // cat
+```
+
+#### 区别
+
+**call、apply与bind的差别**
+
+call和apply改变了函数的**this**上下文后便**执行**该函数,而bind则是返回改变了上下文后的一个函数。
+
+**call、apply的区别**
+
+他们俩之间的差别在于参数的区别，call和aplly的第一个参数都是要改变上下文的对象，而call从第二个参数开始以参数列表的形式展现，apply则是把除了改变上下文对象的参数放在一个数组里面作为它的第二个参数。
+
+```js
+fn.call(obj, arg1, arg2, arg3...);
+fn.apply(obj, [arg1, arg2, arg3...]);
+```
+
+#### 应用
+
+- **求数组中的最大和最小值**
+
+  ```js
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+    // 求最大值
+    console.log(Math.max.apply(Math, arr));
+    console.log(Math.max.call(Math, 1, 2, 3, 4, 5, 6, 7));
+    // 求最小值
+    console.log(Math.min.apply(Math, arr));
+    console.log(Math.min.call(Math, 1, 2, 3, 4, 5, 6, 7));
+  ```
+
+- **将伪数组转化为数组**
+
+  > js中的伪数组(例如通过`document.getElementsByTagName`获取的元素)具有length属性，并且可以通过0、1、2…下标来访问其中的元素，但是没有Array中的push、pop等方法。我们可以利用call、apply来将其转化为真正的数组这样便可以方便地使用数组方法了。
+
+  ```js
+  var arrayLike = {
+    0: 'qianlong',
+    1: 'ziqi',
+    2: 'qianduan',
+    length: 3
+    }
+  ```
+
+  上面就是一个普通的对象字面量，怎么把它变成一个数组呢？最简单的方法就是
+
+  ```js
+  var arr = Array.prototype.slice.call(arrayLike);
+  ```
+
+  上面arr便是一个包含arrayLike元素的真正的数组啦( **注意数据结构必须是以数字为下标而且一定要有length属性** )
+
+- **数组追加**
+
+  > 在js中要往数组中添加元素，可以直接用push方法
+
+  ```js
+  var arr1 = [1,2,3];
+  var arr2 = [4,5,6];
+  [].push.apply(arr1, arr2);
+  // arr1 [1, 2, 3, 4, 5, 6]
+  // arr2 [4,5,6]
+  ```
+
+- **判断变量类型**
+
+  > 对于对象型的数据类型，我们可以借助call来得知他的具体类型，例如数组
+
+  ```js
+  function isArray(obj){
+    return Object.prototype.toString.call(obj) == '[object Array]';
+    }
+  isArray([]) // true
+  isArray('qianlong') // false
+  ```
+
+  
