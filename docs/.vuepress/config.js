@@ -12,16 +12,16 @@ module.exports = {
       { text: '前端', link: '/web/js' },
       { text: '运维', link: '/doc/linux' },
       { text: '代码片段', link: '/code/vue' },
-      // {
-      //   text: '专业',
-      //   items: [
-      //     { text: '计算机网络', link: '/language/chinese/' },
-      //     {
-      //       text: '高级程序设计',
-      //       link: '/language/chinese/',
-      //     },
-      //   ],
-      // },
+      {
+        text: '专业',
+        items: [
+          { text: '计算机网络', link: '/code/vue' },
+          {
+            text: '高级程序设计',
+            link: '/code/vue',
+          },
+        ],
+      },
     ],
     // 侧边栏
     sidebar: {
