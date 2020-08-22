@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.0">
     
     <meta name="description" content="">
-    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.7a25e7fa.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/7.c74dbb8a.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.ded7ffa7.js"><link rel="prefetch" href="/notes/assets/js/11.ee566d7c.js"><link rel="prefetch" href="/notes/assets/js/12.17331110.js"><link rel="prefetch" href="/notes/assets/js/3.f3f6d0a6.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.2a2d8e1b.js"><link rel="prefetch" href="/notes/assets/js/6.a0509dd6.js"><link rel="prefetch" href="/notes/assets/js/8.66bd9cb2.js"><link rel="prefetch" href="/notes/assets/js/9.5455e009.js">
+    <link rel="preload" href="/notes/assets/css/0.styles.31262cea.css" as="style"><link rel="preload" href="/notes/assets/js/app.eea4ca08.js" as="script"><link rel="preload" href="/notes/assets/js/2.2db22ee2.js" as="script"><link rel="preload" href="/notes/assets/js/7.4649bdc3.js" as="script"><link rel="prefetch" href="/notes/assets/js/10.ded7ffa7.js"><link rel="prefetch" href="/notes/assets/js/11.a2ce1d21.js"><link rel="prefetch" href="/notes/assets/js/12.e0c9ed58.js"><link rel="prefetch" href="/notes/assets/js/3.f3f6d0a6.js"><link rel="prefetch" href="/notes/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/notes/assets/js/5.2a2d8e1b.js"><link rel="prefetch" href="/notes/assets/js/6.a0509dd6.js"><link rel="prefetch" href="/notes/assets/js/8.66bd9cb2.js"><link rel="prefetch" href="/notes/assets/js/9.5455e009.js">
     <link rel="stylesheet" href="/notes/assets/css/0.styles.31262cea.css">
   </head>
   <body>
@@ -159,7 +159,7 @@ docker <span class="token builtin class-name">exec</span> showdoc_test <span cla
     <span class="token key atrule">ports</span><span class="token punctuation">:</span>
       <span class="token punctuation">-</span> 27017<span class="token punctuation">:</span><span class="token number">27017</span>
     <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> /home/mongodb<span class="token punctuation">:</span>/data/db
+      <span class="token punctuation">-</span> ./data/<span class="token punctuation">:</span>/data/db
 </code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token builtin class-name">exec</span> -it 9f29c394b9ee /bin/bash
 
 mongo
@@ -212,6 +212,7 @@ quit
    <span class="token punctuation">-</span><span class="token punctuation">-</span>character<span class="token punctuation">-</span>set<span class="token punctuation">-</span>server=utf8mb4
    <span class="token punctuation">-</span><span class="token punctuation">-</span>collation<span class="token punctuation">-</span>server=utf8mb4_general_ci
    <span class="token punctuation">-</span><span class="token punctuation">-</span>explicit_defaults_for_timestamp=true
+   <span class="token punctuation">-</span><span class="token punctuation">-</span>default<span class="token punctuation">-</span>authentication<span class="token punctuation">-</span>plugin=mysql_native_password
   <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
   <span class="token key atrule">environment</span><span class="token punctuation">:</span>
    <span class="token key atrule">TZ</span><span class="token punctuation">:</span> Asia/Shanghai
@@ -219,8 +220,8 @@ quit
   <span class="token key atrule">ports</span><span class="token punctuation">:</span>
    <span class="token punctuation">-</span> 3306<span class="token punctuation">:</span><span class="token number">3306</span>
   <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
-   <span class="token punctuation">-</span> /home/mysql/data<span class="token punctuation">:</span>/var/lib/mysql
-   <span class="token punctuation">-</span> /home/mysql/config<span class="token punctuation">:</span>/etc/mysql/conf.d
+   <span class="token punctuation">-</span> ./mysql/data<span class="token punctuation">:</span>/var/lib/mysql
+   <span class="token punctuation">-</span> ./mysql/config<span class="token punctuation">:</span>/etc/mysql/conf.d
 </code></pre></div><h2 id="jenkins"><a href="#jenkins" class="header-anchor">#</a> Jenkins</h2> <p><code>docker-compose.yml</code></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
 <span class="token key atrule">services</span><span class="token punctuation">:</span>
   <span class="token key atrule">jenkins</span><span class="token punctuation">:</span> 
@@ -245,6 +246,6 @@ quit
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/notes/assets/js/app.7a25e7fa.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/7.c74dbb8a.js" defer></script>
+    <script src="/notes/assets/js/app.eea4ca08.js" defer></script><script src="/notes/assets/js/2.2db22ee2.js" defer></script><script src="/notes/assets/js/7.4649bdc3.js" defer></script>
   </body>
 </html>
