@@ -268,7 +268,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - /home/mongodb:/data/db
+      - ./data/:/data/db
 ```
 
 
@@ -364,6 +364,7 @@ services:
    --character-set-server=utf8mb4
    --collation-server=utf8mb4_general_ci
    --explicit_defaults_for_timestamp=true
+   --default-authentication-plugin=mysql_native_password
   image: mysql
   environment:
    TZ: Asia/Shanghai
@@ -371,8 +372,8 @@ services:
   ports:
    - 3306:3306
   volumes: 
-   - /home/mysql/data:/var/lib/mysql
-   - /home/mysql/config:/etc/mysql/conf.d
+   - ./mysql/data:/var/lib/mysql
+   - ./mysql/config:/etc/mysql/conf.d
 ```
 
 ## Jenkins
