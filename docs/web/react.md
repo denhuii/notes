@@ -1,7 +1,6 @@
-React
-===
+# React
 
-### 1.React核心概念
+## 1. React核心概念
 
 - 虚拟DOM(Virtual DOM)
 - Diff算法(Diff Algorithm)
