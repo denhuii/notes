@@ -814,7 +814,7 @@ Hello.propTypes = {
 
 ## 7. 案例：评论列表
 
-![评论列表](https://cdn.denhuii.com/评论列表.png)
+![评论列表](https://cdn.denhuii.com/img/评论列表.png)
 
 ```js
 import React, { Component } from 'react'
@@ -908,11 +908,11 @@ export default class Home extends Component{
 
 - DOM
 
-  ![dom tree](https://cdn.denhuii.com/dom-tree.png)
+  ![dom tree](https://cdn.denhuii.com/img/dom-tree.png)
 
 - 浏览器渲染流程
 
-  ![浏览器渲染原理](https://cdn.denhuii.com/webkitflow.png)
+  ![浏览器渲染原理](https://cdn.denhuii.com/img/webkitflow.png)
 
 - 什么是Virtual DOM
 
@@ -977,11 +977,11 @@ export default class Home extends Component{
 
   1. tree diff
 
-  ![tree diff](https://cdn.denhuii.com/tree-diff.jpg)
+  ![tree diff](https://cdn.denhuii.com/img/tree-diff.jpg)
 
     以上两棵树只会对**同一层**次的节点进行比较
 
-    ![tree diff2](https://cdn.denhuii.com/tree-diff2.jpg)
+    ![tree diff2](https://cdn.denhuii.com/img/tree-diff2.jpg)
 
     如果两棵树的根元素类型不同，React会销毁旧树，创建新树
 
@@ -997,27 +997,27 @@ export default class Home extends Component{
      - 如果不是，则将该组件判断为 dirty component，从而替换整个组件下的所有子节点。
      - 对于同一类型的组件，有可能其 Virtual DOM 没有任何变化，如果能够确切的知道这点那可以节省大量的 diff 运算时间，因此 React 允许用户通过 shouldComponentUpdate() 来判断该组件是否需要进行 diff。
 
-     ![component diff](https://cdn.denhuii.com/component-diff.jpg)
+     ![component diff](https://cdn.denhuii.com/img/component-diff.jpg)
 
      D和G为不同类型的组件,会直接删除组件D，重新创建组件G
 
   3. element diff
 
-     ![](https://cdn.denhuii.com/insert-F.png)
+     ![](https://cdn.denhuii.com/img/insert-F.png)
 
      如果每个节点都没有唯一的标识，React无法识别每一个节点，那么更新过程会很低效，即，将C更新成F，D更新成C，E更新成D，最后再插入一个E节点,如下图所示。可以看到，React会逐个对节点进行更新，转换到目标节点。而最后插入新的节点E，涉及到的DOM操作非常多。
 
-     ![](https://cdn.denhuii.com/insert-F-no-diff.png)
+     ![](https://cdn.denhuii.com/img/insert-F-no-diff.png)
 
      如果给每个节点唯一的标识（key），那么React能够找到正确的位置去插入新的节点
 
-     ![](https://cdn.denhuii.com/insert-F-diff.png)
+     ![](https://cdn.denhuii.com/img/insert-F-diff.png)
 
 [diff演示](https://supnate.github.io/react-dom-diff/index.html)
 
 ## 10. 生命周期
 
-![生命周期](https://cdn.denhuii.com/React-Lifecycle.png)
+![生命周期](https://cdn.denhuii.com/img/React-Lifecycle.png)
 
 组件的生命周期可分成三个状态:
 
@@ -1269,7 +1269,7 @@ class NameForm extends React.Component {
 
 ## 14. 案例：TODO
 
-![todo](https://cdn.denhuii.com/todo.gif)
+![todo](https://cdn.denhuii.com/img/todo.gif)
 
 App.js
 
@@ -1645,7 +1645,7 @@ class App extends Component {
 Redux 是 JavaScript （不是React，其他的像Angular也可以使用，甚至单纯的JavaScript也阔以使用，和react没有半毛钱关系）状态容器，提供可预测化的状态管理。
 应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。 惟一改变 state 的办法是触发 action，一个描述发生什么的对象。 为了描述 action 如何改变 state 树，你需要编写 reducers。
 
-![redux](https://cdn.denhuii.com/Redux.png)
+![redux](https://cdn.denhuii.com/img/Redux.png)
 
 ### Redux核心内容
 
