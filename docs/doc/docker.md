@@ -29,7 +29,7 @@
    ```bash
    sudo yum-config-manager \
        --add-repo \
-       https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
+       https://download.docker.com/linux/centos/docker-ce.repo
    ```
 
    

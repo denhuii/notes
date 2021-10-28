@@ -1,6 +1,6 @@
-# Linux
+## Linux
 
-## 常用命令
+### 常用命令
 
 ```bash
 # 查看 ssh 服务状态
@@ -13,7 +13,7 @@ netstat -anlp | grep sshd
 vi /etc/ssh/sshd_config
 ```
 
-## 修改ssh端口
+### 修改ssh端口
 
 1. 用vi编辑器打开 ssh 配置文件
 
@@ -58,7 +58,7 @@ vi /etc/ssh/sshd_config
    service sshd restart
    ```
 
-## 通过密匙方式连接ssh
+### 通过密匙方式连接ssh
 
 1. 本地pc执行，会在`~/.ssh/`下生成一个`id_rsa.pub`和`id_rsa`
 
@@ -328,147 +328,3 @@ sudo semanage port -a -p tcp -t http_port_t 8001
 ```
 
 此时，重新启动 Nginx 即可。
-
-## 用户管理
-
-| 命令      |              |
-| --------- | ------------ |
-| `useradd` | 新建用户     |
-| `userdel` | 删除用户     |
-| `passwd`  | 修改用户密码 |
-| `usermod` | 修改用户属性 |
-| `chage`   | 修改用户属性 |
-
-创建用户
-
-> 区分超级管理员root和普通用户
-
-```bash
-# 创建一个用户
-useradd [username]
-
-# 新建一个用户 同时加入用户组
-useradd -g [groupname] [username]
-
-# 验证是否存在用户
-## 1.使用id命令
-id [username]
-# id root
-# uid=0(root) gid=0(root) 组=0(root)
-
-## 2.用户同样会被记录到/etc/passwd 文件中，只要包含了用户名开头这一行，就表示存在该用户
-tail -10 /etc/passwd
-# denhuii:x:1000:1000::/home/denhuii:/bin/bash
-
-### 2.1新建用户可以通过新建一行字段来创建
-
-## 3.用户密码相关的文件同样也可以作为判断用户是否存在的依据
-tail -10 /etc/shadow
-# denhuii...
-```
-
-> 用户组，在创建用户时没有指定用户组时，系统会默认创建与用户名同名的用户组
-
-删除用户
-
-```bash
-# 删除用户
-userdel [username]
-
-# 删除用户时同时删除家目录
-userdel -r [username]
-```
-
-指定密码
-
-```bash
-# 给用户指定密码
-passwd [username]
-```
-
-> 修改root用户密码时，直接使用`passwd`即可，不用指定用户名
-
-修改用户属性
-
-```bash
-# 修改用户对应的家目录
-usermod -d /home/[path] [username]
-
-# 修改用户组(将用户user1的用户组改为了group1)
-usermod -g group1 user1
-```
-
-修改用户密码相关
-
-```bash
-chage -h
-```
-
-## 用户组管理
-
-| 命令       |            |
-| ---------- | ---------- |
-| `groupadd` | 新建用户组 |
-| `groupdel` | 删除用户组 |
-
-```bash
-# 新建用户组
-groupadd [groupname]
-
-# 删除用户组
-groupdel [groupname]
-```
-
-## 切换用户
-
-```bash
-# 切换用户 - 作用是完全
-su
-
-## 使用login shell 方式切换用户
-su - [username]
-
-# 以其他用户身份执行命令
-sudo
-
-## 设置需要使用sudo的用户(组)
-visudo
-
-# 退出当前用户
-exit
-```
-
-> 普通用户切换到root用户需要输入密码
-
-```bash
-# 查找命令对应的文件位置
-which [commond]
-```
-
-场景一：给普通用户使用`shutdown`命令
-
-```bash
-### root使用关机命令 30分钟后关机
-shutdown -h 30
-## use 'shutdown -c' to cancel.
-
-# 2.切换到普通用户取消关机
-su - denghui
-
-# 3.执行关机取消命令
-shutdown -c
-##Failed to talk to shutdownd, shutdown hasn't been cancelled: 权限不够
-```
-
-1. 通过root用户来停止
-2. 通过管理员给用户或者用户组单独添加命令
-
-```bash
-# 切换到root用户下 打开visudo样例文件
-
-## Allows people in group wheel to run all commands
-%wheel  ALL=(ALL)       ALL     
-#第一段 用户组前面添加%，用户直接写就好了 第二段 设置主机(localhost/All)  第三段 是否需要密码
- denghui ALL=shutdown -c
-```
-
