@@ -1,6 +1,6 @@
 # Docker
 
-## CentOS中安装Docker的方法
+## CentOS中安装Docker的方法1
 
 1. 先删除旧的版本(如果没有可以跳过)
 
