@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /IMG_60.gif
-heroText: denhuii
+heroText: Dev
 tagline: 不谋全局者，不足谋一域
 actionText: Let's go →
 actionLink: /
